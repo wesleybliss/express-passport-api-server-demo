@@ -1,6 +1,12 @@
 Express & Passport Demo
 =======================
 
+## TODO
+
+ 1. Database or mock data
+ 2. Passport authentication
+ 3. Client example
+
 ## Setup
 
 ```
