@@ -32,9 +32,11 @@ if ( config.logging.requests ) {
 // @todo Simple routes for now, but this should be abstracted to a middleware later
 var routes = {};
 routes.default = new (require('./routes/index'))();
+routes.things = new (require('./routes/things'))();
 
 // Hook up routes
 app.get( '/', routes.default.index.bind( routes.default ) );
+app.get( '/things', routes.things.list.bind( routes.things ) );
 
 
 // Start the server

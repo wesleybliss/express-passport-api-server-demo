@@ -1,7 +1,7 @@
 
 var gulp       = require('gulp'),
-	w          = require('./src/logging'),
-	supervisor = require('gulp-supervisor')
+    log        = (new (require('../logging'))).getLogger(),
+    supervisor = require('gulp-supervisor')
 ;
 
 // Log levels { error: 0, warn: 1, info: 2, verbose: 3, debug: 4, silly: 5 }
@@ -13,10 +13,10 @@ gulp.task( 'supervisor', [], function() {
     supervisor( 'src/app.js', {
         args:         [ 'dev' ],
         pollInterval: 500,
-        exec: 		  'node',
-        debug: 		  false,
+        exec:         'node',
+        debug:        false,
         noRestartOn:  'exit',
-        quiet: 		  false
+        quiet:        false
     });
 });
 
@@ -24,5 +24,5 @@ gulp.task( 'supervisor', [], function() {
  * Runs the main application (in debug mode).
  */
 gulp.task( 'default', ['supervisor'], function() {
-	w.info( 'info', 'Gulp task \'default\' running app under Supervisor as dev.' );
+    log.info( 'info', 'Gulp task \'default\' running app under Supervisor as dev.' );
 });
