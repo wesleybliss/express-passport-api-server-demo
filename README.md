@@ -1,4 +1,26 @@
 Express & Passport Demo
 =======================
 
-@todo Docs
+## Setup
+
+```
+# Clone the repository
+$ git clone git@github.com:wesleybliss/express-passport-api-server-demo.git
+
+# Install global dependencies
+$ npm install -g gulp
+$ npm install -g supervisor
+
+# Navigate to the server source directory
+$ cd server
+
+# Install project dependencies
+$ npm install
+
+# Create a config
+$ cd src
+$ cp config.js.template config.js
+
+# Run the server
+$ gulp
+```
