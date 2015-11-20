@@ -1,0 +1,14 @@
+{
+  "name": "express-passport",
+  "version": "0.0.1",
+  "description": "Express & passport test/demo",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Wesley Bliss <wesley.bliss@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
