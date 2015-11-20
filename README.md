@@ -31,3 +31,10 @@ $ cd server
 # Run the server
 $ gulp
 ```
+
+## Accessing
+
+In a browser or POSTMan, go to the URL:
+```
+http://localhost:8080/
+```
