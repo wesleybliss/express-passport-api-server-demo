@@ -1,3 +1,6 @@
+# Don't include the config (on setup, user should clone config.js.template)
+/server/src/config.js
+
 # Logs
 logs
 *.log

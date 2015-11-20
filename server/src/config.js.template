@@ -1,0 +1,11 @@
+
+module.exports = {
+    
+    logging: {
+        
+        // Log HTTP requests
+        requests: false
+        
+    }
+    
+};

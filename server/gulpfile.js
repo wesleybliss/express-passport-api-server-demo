@@ -1,4 +1,3 @@
-'use strict';
 
 var gulp       = require('gulp'),
 	w          = require('./src/logging'),
@@ -12,12 +11,12 @@ var gulp       = require('gulp'),
  */
 gulp.task( 'supervisor', [], function() {
     supervisor( 'src/app.js', {
-  		args: 		  [ 'dev' ],
-  		pollInterval: 500,
-  		exec: 		  'node',
-  		debug: 		  false,
-  		noRestartOn:  'exit',
-  		quiet: 		  false
+        args:         [ 'dev' ],
+        pollInterval: 500,
+        exec: 		  'node',
+        debug: 		  false,
+        noRestartOn:  'exit',
+        quiet: 		  false
     });
 });
 
