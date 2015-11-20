@@ -20,7 +20,14 @@ $ npm install
 # Create a config
 $ cd src
 $ cp config.js.template config.js
+```
 
+## Running
+
+```
+# Navigate to the server source directory
+$ cd server
+ 
 # Run the server
 $ gulp
 ```
