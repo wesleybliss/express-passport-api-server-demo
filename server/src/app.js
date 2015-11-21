@@ -3,7 +3,8 @@ var config         = require('./config'),
     express        = require('express'),
     logger         = new (require('./logging'))(),
     log            = logger.getLogger(),
-    expressWinston = require('express-winston')
+    expressWinston = require('express-winston'),
+    passport       = require('passport')
 ;
 
 // Log levels { error: 0, warn: 1, info: 2, verbose: 3, debug: 4, silly: 5 }
@@ -28,6 +29,8 @@ if ( config.logging.requests ) {
     }));
 }
 
+app.use( passport.initialize() );
+
 // Load routes
 // @todo Simple routes for now, but this should be abstracted to a middleware later
 var routes = {};
@@ -37,16 +40,17 @@ routes.things = new (require('./routes/things'))();
 // Hook up routes
 app.get( '/', routes.default.index.bind( routes.default ) );
 app.get( '/things', routes.things.list.bind( routes.things ) );
+app.post( '/signup', passport.authenticate( 'local-signup' ) );
 
 
 // Start the server
 var server = app.listen( 8080, function() {
-    
+
     log.info(
         '\n\n//\n// ' + app.locals.title + '\n//' +
         ' Listening at http://%s:%s\n//\n',
         server.address().address,
         server.address().port
     );
-    
+
 });

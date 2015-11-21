@@ -1,11 +1,15 @@
 
 module.exports = {
-    
+
     logging: {
-        
+
         // Log HTTP requests
         requests: false
-        
+
+    },
+
+    database: {
+        uri: 'mongodb://express:express@localhost'
     }
-    
+
 };
