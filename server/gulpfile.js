@@ -1,6 +1,6 @@
 
 var gulp       = require('gulp'),
-    log        = (new (require('../logging'))).getLogger(),
+    log        = (new (require('./src/logging'))).getLogger(),
     supervisor = require('gulp-supervisor')
 ;
 
